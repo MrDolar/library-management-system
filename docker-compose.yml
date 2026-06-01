@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - AI_API_KEY=${AI_API_KEY}
+      - AI_BASE_URL=${AI_BASE_URL:-https://api.openai.com/v1}
+      - AI_MODEL=${AI_MODEL:-gpt-3.5-turbo}
+      - DATABASE_URL=sqlite:///./library.db
+    volumes:
+      - ./backend:/app
+      - db-data:/app/instance
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # 前端 (待实现)
+  # frontend:
+  #   build: ./frontend
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+
+volumes:
+  db-data:
