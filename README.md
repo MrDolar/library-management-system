@@ -1,163 +1,176 @@
-# 馃摎 鏅鸿兘鍥句功绠＄悊绯荤粺
+# 📚 智能图书管理系统
 
-AI 椹卞姩鐨勭幇浠ｅ寲鍥句功绠＄悊骞冲彴锛岄泦鎴愭櫤鑳芥帹鑽愩€佽涔夋悳绱€佽嚜鍔ㄥ垎绫荤瓑 AI 鍔熻兘銆?
-## 鉁?鍔熻兘鐗规€?
-### 鏍稿績鍔熻兘
-- 馃摉 **鍥句功绠＄悊** - CRUD銆佸垎绫汇€佸簱瀛樼鐞?- 馃攧 **鍊熼槄绠＄悊** - 鍊熶功銆佽繕涔︺€佺画鍊熴€侀€炬湡澶勭悊
-- 馃懁 **鐢ㄦ埛绠＄悊** - 娉ㄥ唽銆佺櫥褰曘€佽鑹叉潈闄?- 馃搳 **鏁版嵁缁熻** - 鍊熼槄鎶ヨ〃銆佺儹闂ㄥ浘涔?
-### AI 鏅鸿兘鍔熻兘 馃
-- 馃幆 **鏅鸿兘鎺ㄨ崘** - 鍩轰簬鍊熼槄鍘嗗彶鐨勪釜鎬у寲鎺ㄨ崘
-- 馃攳 **璇箟鎼滅储** - 鑷劧璇█鎻忚堪鎵句功锛堝"鍏充簬澶┖鐨勭骞诲皬璇?锛?- 馃彿锔?**鏅鸿兘鍒嗙被** - AI 鑷姩鎺ㄨ崘鍥句功鍒嗙被
-- 馃摑 **鎽樿鐢熸垚** - 鑷姩鐢熸垚鍥句功绠€浠?- 馃挰 **瀵硅瘽鍔╂墜** - AI 鍥炵瓟鍥句功棣嗙浉鍏抽棶棰?
-## 馃彈锔?鎶€鏈爤
+AI 驱动的现代化图书管理平台，集成智能推荐、语义搜索、自动分类等 AI 功能。
 
-| 灞傜骇 | 鎶€鏈?|
+## ✨ 功能特性
+
+### 核心功能
+- 📖 **图书管理** - CRUD、分类、库存管理
+- 🔄 **借阅管理** - 借书、还书、续借、逾期处理
+- 👤 **用户管理** - 注册、登录、角色权限
+- 📊 **数据统计** - 借阅报表、热门图书
+
+### AI 智能功能 🤖
+- 🎯 **智能推荐** - 基于借阅历史的个性化推荐
+- 🔍 **语义搜索** - 自然语言描述找书（如"关于太空的科幻小说"）
+- 🏷️ **智能分类** - AI 自动推荐图书分类
+- 📝 **摘要生成** - 自动生成图书简介
+- 💬 **对话助手** - AI 回答图书馆相关问题
+
+## 🏗️ 技术栈
+
+| 层级 | 技术 |
 |------|------|
-| 鍓嶇 | React 18 + TypeScript + Ant Design |
-| 鍚庣 | Python 3.11 + FastAPI + SQLAlchemy |
-| 鏁版嵁搴?| SQLite (寮€鍙? / PostgreSQL (鐢熶骇) |
+| 前端 | React 18 + TypeScript + Ant Design |
+| 后端 | Python 3.11 + FastAPI + SQLAlchemy |
+| 数据库 | SQLite (开发) / PostgreSQL (生产) |
 | AI | OpenAI Compatible API |
-| 璁よ瘉 | JWT |
+| 认证 | JWT |
 
-## 馃殌 蹇€熷紑濮?
-### 鍓嶇疆瑕佹眰
+## 🚀 快速开始
+
+### 前置要求
 - Python 3.11+
-- Node.js 18+ (鍓嶇寮€鍙?
-- AI API Key (OpenAI / DeepSeek 绛?
+- Node.js 18+ (前端开发)
+- AI API Key (OpenAI / DeepSeek 等)
 
-### 鍚庣鍚姩
+### 后端启动
 
 ```bash
 cd backend
 
-# 瀹夎渚濊禆
+# 安装依赖
 pip install -r requirements.txt
 
-# 閰嶇疆鐜鍙橀噺
+# 配置环境变量
 cp .env.example .env
-# 缂栬緫 .env锛屽～鍏ヤ綘鐨?AI_API_KEY
+# 编辑 .env，填入你的 AI_API_KEY
 
-# 鍚姩鏈嶅姟
+# 启动服务
 uvicorn app.main:app --reload --port 8000
 ```
 
-鍚姩鍚庤闂?
-- API 鏂囨。: http://localhost:8000/docs
-- 鍋ュ悍妫€鏌? http://localhost:8000/health
+启动后访问:
+- API 文档: http://localhost:8000/docs
+- 健康检查: http://localhost:8000/health
 
-### 鍓嶇鍚姩
+### 前端启动
 
 ```bash
 cd frontend
 
-# 瀹夎渚濊禆
+# 安装依赖
 npm install
 
-# 鍚姩寮€鍙戞湇鍔″櫒
+# 启动开发服务器
 npm start
 ```
 
-### Docker 閮ㄧ讲
+### Docker 部署
 
 ```bash
 docker-compose up -d
 ```
 
-## 馃搧 椤圭洰缁撴瀯
+## 📁 项目结构
 
 ```
 library-management-system/
-鈹溾攢鈹€ docs/                    # 馃搫 椤圭洰鏂囨。
-鈹?  鈹溾攢鈹€ PRD.md              # 浜у搧闇€姹傛枃妗?鈹?  鈹溾攢鈹€ SYSTEM_DESIGN.md    # 绯荤粺璁捐鏂囨。
-鈹?  鈹斺攢鈹€ TEST_PLAN.md        # 娴嬭瘯鍒嗘瀽鏂囨。
-鈹溾攢鈹€ backend/                 # 馃悕 鍚庣鏈嶅姟
-鈹?  鈹溾攢鈹€ app/
-鈹?  鈹?  鈹溾攢鈹€ api/            # API 璺敱
-鈹?  鈹?  鈹溾攢鈹€ models/         # 鏁版嵁妯″瀷
-鈹?  鈹?  鈹溾攢鈹€ services/       # 涓氬姟閫昏緫
-鈹?  鈹?  鈹斺攢鈹€ core/           # 鏍稿績妯″潡
-鈹?  鈹斺攢鈹€ requirements.txt
-鈹溾攢鈹€ frontend/                # 鈿涳笍 鍓嶇搴旂敤 (寰呭疄鐜?
-鈹溾攢鈹€ docker-compose.yml
-鈹斺攢鈹€ README.md
+├── docs/                    # 📄 项目文档
+│   ├── PRD.md              # 产品需求文档
+│   ├── SYSTEM_DESIGN.md    # 系统设计文档
+│   └── TEST_PLAN.md        # 测试分析文档
+├── backend/                 # 🐍 后端服务
+│   ├── app/
+│   │   ├── api/            # API 路由
+│   │   ├── models/         # 数据模型
+│   │   ├── services/       # 业务逻辑
+│   │   └── core/           # 核心模块
+│   └── requirements.txt
+├── frontend/                # ⚛️ 前端应用 (待实现)
+├── docker-compose.yml
+└── README.md
 ```
 
-## 馃攼 瀹夊叏璁捐
+## 🔐 安全设计
 
-### AI 瀵嗛挜瀹夊叏
-- 鉁?API Key 浠呭瓨鍌ㄥ湪鏈嶅姟绔幆澧冨彉閲?- 鉁?鍓嶇涓嶆帴瑙︿换浣曞瘑閽?- 鉁?鎵€鏈?AI 璇锋眰閫氳繃鍚庣浠ｇ悊
-- 鉁?`.env` 宸插姞鍏?`.gitignore`
-- 鉁?鏀寔 Key 杞崲
+### AI 密钥安全
+- ✅ API Key 仅存储在服务端环境变量
+- ✅ 前端不接触任何密钥
+- ✅ 所有 AI 请求通过后端代理
+- ✅ `.env` 已加入 `.gitignore`
+- ✅ 支持 Key 轮换
 
-### 璁よ瘉瀹夊叏
-- JWT Token 璁よ瘉
-- bcrypt 瀵嗙爜鍝堝笇
-- 瑙掕壊鍒嗙骇鏉冮檺
-- SQL 娉ㄥ叆闃叉姢
+### 认证安全
+- JWT Token 认证
+- bcrypt 密码哈希
+- 角色分级权限
+- SQL 注入防护
 
-## 馃摉 API 鎺ュ彛
+## 📖 API 接口
 
-### 璁よ瘉
+### 认证
 ```
-POST /api/auth/register    娉ㄥ唽
-POST /api/auth/login       鐧诲綍
-GET  /api/auth/me          褰撳墠鐢ㄦ埛
-```
-
-### 鍥句功
-```
-GET    /api/books           鍥句功鍒楄〃
-POST   /api/books           鏂板鍥句功 (绠＄悊鍛?
-GET    /api/books/{id}      鍥句功璇︽儏
-PUT    /api/books/{id}      鏇存柊鍥句功 (绠＄悊鍛?
-DELETE /api/books/{id}      鍒犻櫎鍥句功 (绠＄悊鍛?
-GET    /api/books/search    鎼滅储鍥句功
+POST /api/auth/register    注册
+POST /api/auth/login       登录
+GET  /api/auth/me          当前用户
 ```
 
-### 鍊熼槄
+### 图书
 ```
-POST /api/borrows              鍊熶功
-PUT  /api/borrows/{id}/return  杩樹功
-PUT  /api/borrows/{id}/renew   缁€?GET  /api/borrows/my           鎴戠殑鍊熼槄
-```
-
-### AI 鍔熻兘
-```
-POST /api/ai/recommend     鏅鸿兘鎺ㄨ崘
-POST /api/ai/search        璇箟鎼滅储
-POST /api/ai/classify      鏅鸿兘鍒嗙被
-POST /api/ai/summarize     鎽樿鐢熸垚
-POST /api/ai/chat          瀵硅瘽鍔╂墜
+GET    /api/books           图书列表
+POST   /api/books           新增图书 (管理员)
+GET    /api/books/{id}      图书详情
+PUT    /api/books/{id}      更新图书 (管理员)
+DELETE /api/books/{id}      删除图书 (管理员)
+GET    /api/books/search    搜索图书
 ```
 
-## 鈿欙笍 鐜鍙橀噺
+### 借阅
+```
+POST /api/borrows              借书
+PUT  /api/borrows/{id}/return  还书
+PUT  /api/borrows/{id}/renew   续借
+GET  /api/borrows/my           我的借阅
+```
 
-| 鍙橀噺 | 璇存槑 | 榛樿鍊?|
+### AI 功能
+```
+POST /api/ai/recommend     智能推荐
+POST /api/ai/search        语义搜索
+POST /api/ai/classify      智能分类
+POST /api/ai/summarize     摘要生成
+POST /api/ai/chat          对话助手
+```
+
+## ⚙️ 环境变量
+
+| 变量 | 说明 | 默认值 |
 |------|------|--------|
-| `AI_API_KEY` | LLM API Key | (蹇呭～) |
-| `AI_BASE_URL` | LLM API 鍦板潃 | https://api.openai.com/v1 |
-| `AI_MODEL` | 瀵硅瘽妯″瀷 | gpt-3.5-turbo |
-| `AI_EMBEDDING_MODEL` | 鍚戦噺妯″瀷 | text-embedding-ada-002 |
-| `JWT_SECRET` | JWT 瀵嗛挜 | (鑷姩鐢熸垚) |
-| `DATABASE_URL` | 鏁版嵁搴撳湴鍧€ | sqlite:///./library.db |
+| `AI_API_KEY` | LLM API Key | (必填) |
+| `AI_BASE_URL` | LLM API 地址 | https://api.openai.com/v1 |
+| `AI_MODEL` | 对话模型 | gpt-3.5-turbo |
+| `AI_EMBEDDING_MODEL` | 向量模型 | text-embedding-ada-002 |
+| `JWT_SECRET` | JWT 密钥 | (自动生成) |
+| `DATABASE_URL` | 数据库地址 | sqlite:///./library.db |
 
-## 馃 鏀寔鐨?AI 鏈嶅姟
+## 🤝 支持的 AI 服务
 
-鏈郴缁熶娇鐢?OpenAI Compatible API锛屾敮鎸佷互涓嬫湇鍔★細
+本系统使用 OpenAI Compatible API，支持以下服务：
 
-| 鏈嶅姟 | BASE_URL | 璇存槑 |
+| 服务 | BASE_URL | 说明 |
 |------|----------|------|
-| OpenAI | https://api.openai.com/v1 | 瀹樻柟 API |
-| DeepSeek | https://api.deepseek.com/v1 | 鍥戒骇澶фā鍨?|
-| 鏈湴妯″瀷 | http://localhost:11434/v1 | Ollama 绛?|
-| 鍏朵粬 | 鑷畾涔?| 鍏煎 OpenAI 鏍煎紡鍗冲彲 |
+| OpenAI | https://api.openai.com/v1 | 官方 API |
+| DeepSeek | https://api.deepseek.com/v1 | 国产大模型 |
+| 本地模型 | http://localhost:11434/v1 | Ollama 等 |
+| 其他 | 自定义 | 兼容 OpenAI 格式即可 |
 
-## 馃搫 鏂囨。
+## 📄 文档
 
-- [浜у搧闇€姹傛枃妗?(PRD)](docs/PRD.md)
-- [绯荤粺璁捐鏂囨。](docs/SYSTEM_DESIGN.md)
-- [娴嬭瘯鍒嗘瀽鏂囨。](docs/TEST_PLAN.md)
+- [产品需求文档 (PRD)](docs/PRD.md)
+- [系统设计文档](docs/SYSTEM_DESIGN.md)
+- [测试分析文档](docs/TEST_PLAN.md)
 
-## 馃摑 License
+## 📝 License
 
 MIT License
